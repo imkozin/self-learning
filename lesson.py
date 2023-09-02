@@ -368,7 +368,7 @@ def get_nums():
         else:
             print(f"{i} в степени 3 = {i ** 3}")
 
-get_nums()
+#get_nums()
 # Пример:
 # вход:
 # 4
@@ -382,6 +382,9 @@ def main():
   print(4, 8, 15, 16, 23, 42, sep="\n")
 
 # main()
+
+s1 = 'hello'
+# print(s1[1::])
   
 # Домашнее задание:
 # I)
@@ -391,5 +394,33 @@ def main():
 # 3) Все символы с четными индексами;
 # 4) Все символы с нечетными индексами;
 # 5) Все символы в обратном порядке.
+
+def print_string():
+    s1 = input()
+    print(len(s1))
+    print(s1[2]) # OK
+    print(s1[:4]) # OK
+    print(s1[::2]) # OK
+    print(s1[1::2]) # OK
+    print(s1[::-1]) # OK
+
+#print_string()
+
 # II)
 # Напишите программу, которая получает на вход строку и делит ее на две равные части (если длина строки - четная, а если нечетная, то вторая часть должна быть на один символ больше).
+
+def splitstr():
+    s = input()
+    length = len(s)
+
+    if length % 2 == 0:
+        p1 = s[:length // 2]
+        p2 = s[length // 2:]
+    else:
+        p1 = s[:length // 2]
+        p2 = s[length // 2 + 1:]
+
+    print(p1)
+    print(p2)
+
+splitstr()
