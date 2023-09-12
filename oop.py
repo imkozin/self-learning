@@ -37,3 +37,4 @@ class School(Building):
 
 
 school = School(2000, 'Haifa')
+

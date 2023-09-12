@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* для событий клавишь */
+    .box {
+      position: relative;
+      height: 400px;
+      border: 1px solid green;
+    }
+
+    .box-item {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: red;
+    }
+
+    /* для скрытия / показа текста */
+    .massage {
+      display: none;
+    }
+
+    .massage_active {
+      display: block;
+    }
+
+    /* для табов */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content_active {
+      display: block;
+    }
+
+    .tabs {
+      display: flex;
+    }
+
+    .tab {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .tab:hover {
+      font-size: 30px;
+      color: red;
+    }
+
+    .tab_active {
+      font-size: 30px;
+      color: red;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="unicalID">Поиск элемента по id</div>
+  <!-- <div id="unicalID">Поиск элемента по id</div>
+
+  <div class="class__name">Поиск элемента по классу</div>
+
+  <ul>
+    <li class="item">Пункт1</li>
+    <li class="item">Пункт2</li>
+    <li class="item">Пункт3</li>
+    <li class="item">Пункт4</li>
+  </ul>
+
+  <h1>Поиск элемента по тегу</h1>
+  <h2>Поиск элемента по тегу заголовка второго уровня</h2>
+  <h2>Поиск элемента по тегу заголовка второго уровня</h2>
+  <h2>Поиск элемента по тегу заголовка второго уровня</h2>
+
+  <div name="myName">Поиск элемента по атрибуту name</div>
+
+  <div name="myNameTwo">Поиск элемента по атрибуту name</div>
+  <div name="myNameTwo">Поиск элемента по атрибуту name</div> -->
+
+  <button id="btn">Отправить</button>
+
+  <input type="text" id="inputName" placeholder="ФИО">
+
+  <div class="box">
+    <div class="box-item" id="boxItem"></div>
+  </div>
+
+  <br>
+  <br>
+
+  <button id="isShow"></button>
+  <p id="massage" class="massage">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci inventore placeat debitis magni dolor aliquid necessitatibus in, commodi illum nostrum illo accusamus deserunt ab. Ipsum cupiditate quis ut architecto veniam!
+  </p>
+
+  <br>
+  <br>
+
+
+  <div class="tabs">
+    <div class="tab" id="tab1">Tab 1</div>
+    <div class="tab" id="tab2">Tab 2</div>
+    <div class="tab" id="tab3">Tab 3</div>
+  </div>
+  
+  <div class="tab-content" id="content1">
+    <h3>Tab 1 Content</h3>
+    <p>This is the content for Tab 1</p>
+  </div>
+  
+  <div class="tab-content" id="content2">
+    <h3>Tab 2 Content</h3>
+    <p>This is the content for Tab 2</p>
+  </div>
+  
+  <div class="tab-content" id="content3">
+    <h3>Tab 3 Content</h3>
+    <p>This is the content for Tab 3</p>
+  </div>
+  
+  <script src="./script.js"></script>
+</body>
+</html>
