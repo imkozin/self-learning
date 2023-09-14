@@ -10,7 +10,21 @@ const reverse = (str) => {
     return result;
 }
 
-reverse('Hello, world!')
+// reverse('Hello, world!')
+
+const bigLettersCount = (str) => {
+    // BEGIN (write your solution here)
+    let uppercase = 0;
+    
+    for (let char of str) {
+      if (char.toUpperCase() === char) {
+        uppercase += 1
+      }
+    }
+
+    return uppercase
+    // END
+  };
 
 
 const smallestDivisor = (num) => {
@@ -30,7 +44,7 @@ const smallestDivisor = (num) => {
   };
   
 
-console.log(smallestDivisor(15));
+// console.log(smallestDivisor(15));
 
 const isPrime = (n) => {
     if (n <= 1) {
@@ -45,3 +59,41 @@ const isPrime = (n) => {
    
      return true;
    }
+
+const sequenceSum = (begin, end) => {
+    // BEGIN (write your solution here)
+    if (begin > end) {
+      return NaN;
+    } else if (begin === end) {
+      return begin
+    } 
+      
+    return begin + sequenceSum(begin + 1, end)
+    // END
+  };
+  
+const addDigits = (n) => {
+    let num = n.toString()
+    let total = 0;
+  
+    for (let i = 0; i < num.length; i++) {
+      total += Number(num[i])
+    }
+  
+    return total;
+  }
+  
+console.log(addDigits(123));
+
+const capitalized = (w) => {
+    let sentence = w.split(' ');
+
+    for (let i = 0; i < sentence.length; i++) {
+        let word = sentence[i];
+        sentence[i] = word[0].toUpperCase() + word.slice(1);
+    }
+
+    console.log(sentence.join(', '));
+}
+
+capitalized('hello world');
