@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import {books} from './books';
+import Book from './Book';
 
 // function Greeting() {
 //   return React.createElement('h2', {}, 'hello world')
@@ -25,59 +27,71 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 // root.render(<Greeting />)
-const names = ['john', 'peter', 'susan']
-const newNames = names.map((name) => {
-  console.log(name)
-  return <h1>{name}</h1>
-})
+// const names = ['john', 'peter', 'susan']
+// const newNames = names.map((name) => {
+//   console.log(name)
+//   return <h1>{name}</h1>
+// })
 
 function BookList() {
-//     const books = [
-//         {
-//       author: 'Jordan Moore',
-//       title: 'Elon Musk',
-//       img: 'https://images-na.ssl-images-amazon.com/images/I/814mI0-rkxL._AC_UL900_SR900,600_.jpg',
-//         },
-//         {
-//       author: 'James Clear',
-//       title: 'Atomic Habits',
-//       img: 'https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg',
-//         }
-// ]
+     
+    const getBook = (id) => {
+        const book = books.find((book) => book.id === id)
+        console.log(book);
+    }
 
-
-
-    // const title = 'Elon Musk'
-    // const author = 'Jordan Moore'
-    // const img =
-    //   'https://images-na.ssl-images-amazon.com/images/I/814mI0-rkxL._AC_UL900_SR900,600_.jpg'
   return (
     <section className="booklist">
-        {names.map((name) => {
-            return <h1>{name}</h1>
+        {books.map((book) => {
+            return <Book key={book.id} {...book} getBook={getBook}/>
         })}
 
     </section>
   )
 }
 
-const Book = (props) => {
-    const {img, title, author} = props;
-    const inlineHeadingStyles = {
-      color: '#617d98',
-      fontSize: '0.75rem',
-      marginTop: '0.5rem',
-    }
-    return (
-      <article className="book">
-        <img
-          src={img}
-          alt="front"
-          />
-        <h2>{title}</h2>
-        <h4 style={inlineHeadingStyles}>{author}</h4>
-      </article>
-    )}
 
 
 root.render(<BookList/>)
+
+
+// const EventExamples = () => {
+    // const handleFormInput = (e) => {
+    //     console.log('handle form input value', e.target.value);
+    //     console.log('handle form name', e.target.name);
+
+    // };
+    // const handleButtonClick = () => {
+    //     alert('handle button click')
+    // }
+    // const handleFormSubmission = (e) => {
+    //     e.preventDefault();
+    //     console.log('Form submitted');
+    // }
+    // return (
+    //   <section>
+        // {/* <form onSubmit={handleFormSubmission}>
+        //   <h2>Typical Form</h2>
+        //   <input
+        //     type="text"
+        //     name="example"
+        //     onChange={handleFormInput}
+        //     style={{ margin: '1rem 0' }}
+        //   />
+        //   <button type="submit">submit</button>
+        // </form>
+        // <div>
+        //   <button type='button' onClick={handleButtonClick}>click</button>
+        // </div> */}
+    //         <form>
+    //             <input type="text" name="product" id="" onChange={(e) => console.log(e.target.value)} style={{margin: '1rem 0'}}/>
+    //             <button type="submit">submit</button>
+    //         </form>
+    //     </section>
+    //     )
+    // };
+
+// const btn = document.getElementById('btn')
+// btn.addEventListener('click', function (e) {
+    
+// })
