@@ -35,18 +35,21 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 
 function BookList() {
      
-    const getBook = (id) => {
-        const book = books.find((book) => book.id === id)
-        console.log(book);
-    }
+    // const getBook = (id) => {
+    //     const book = books.find((book) => book.id === id)
+    //     console.log(book);
+    // }
 
   return (
-    <section className="booklist">
-        {books.map((book) => {
-            return <Book key={book.id} {...book} getBook={getBook}/>
+    <>  
+        <h1>amazon best sellers</h1>
+      <section className="booklist">
+        {books.map((book, index) => {
+            return <Book key={book.id} {...book} number={index}/>
         })}
 
-    </section>
+        </section>
+    </>
   )
 }
 
