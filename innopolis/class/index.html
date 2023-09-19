@@ -5,10 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .goods-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .good {
+            border: 1px solid black;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .filter {
+            width: 100px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Promises</h1>
-    <button>get</button>
+    <!-- <h1>Promises</h1>
+    <button>get</button> -->
+    <div>
+        <label for="">Minimal Price
+            <input id="price_min" type="number" min="0" step="10" max="300">
+        </label>
+    </div>
+    <div id="goods-container">
+        <!-- <div class="good">
+            <h2 class="good__header">Item</h2>
+            <img src="" alt="" class="good__img">
+            <p class="good__description">Description</p>
+            <p class="good__price">100 RUR</p>
+            <button class="good__buy">Buy</button>
+        </div> -->
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
