@@ -87,8 +87,22 @@ const goodContainer = document.getElementById('goods-container')
 const priceMin = document.getElementById('price_min')
 
 const filters = {
-    price_min: 0,
+    price_min: null,
+    price_max: null,
+    title: null,
+    description: null
 };
+
+const watchedObject = new Proxy((filters), {
+  get() {},
+  set(obj, key, value) {
+    obj[key] = value
+
+    const activeFilters = getActiveFilters(obj);
+
+    const filteredGoods = activeFilters.reduce((goods), [filtername, ])
+  }
+})
 
 priceMin.addEventListener('input', (e) => {
     const currentValue = e.target.value;
