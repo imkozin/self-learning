@@ -1,29 +1,17 @@
-let getTodos = fetch('https://reqres.in/api/users?per_page=12')
+let box = document.querySelector('.box')
 
-getTodos
-  .then((response) => {
-    return response.json()
-  })
-  .then((result) => {
-    console.log(result);
-    outputPage(result)
-  })
+console.log(box.offsetLeft);
+console.log(box.offsetTop);
+console.log(box.offsetWidth)
+console.log(box.offsetHeight)
 
-// console.log('getTodos', getTodos);
+console.log(box.clientTop);
+console.log(box.clientLeft);
 
-const outputPage = (data) => {
-  // console.log('data', data);
+let openBlock = document.querySelector('#openBlock')
 
-  data.data.forEach((element) => {
-    console.log('element', element)
-    let todo = document.createElement('div')
-    let title = document.createElement('h2')
-    let completed = document.createElement('span')
+openBlock.addEventListener('click', () => {
+  box.style.height = `${box.scrollHeight}px`
+})
 
-    todo.append(title)
-    todo.append(completed)
-
-    document.body.append(todo)
-  })
-}
-
+console.log('get computed', getComputedStyle(box).width);
