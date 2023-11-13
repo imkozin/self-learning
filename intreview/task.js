@@ -1,9 +1,9 @@
 // Задание.
 // 1. Напишите функцию, которая берет список неотрицательных целых чисел и строк и возвращает новый список с отфильтрованными числами.
-const myArr = ['Jack', 10, 'John', 4, 'Marc', 28]
+const myArr = ['Jack', 10, 'John', 4, 'Marc', 28, -1, -5]
 
 const getPositiveNumbers = (arr) => {
-    const filteredArr = arr.filter(el => typeof el === 'number')
+    const filteredArr = arr.filter(el => typeof el === 'number' && el > 0)
 
     return filteredArr
 }
@@ -17,14 +17,10 @@ const accum = (str) => {
         return 'Provide a valid string'
     }
 
-    let result = []
-
-    for (let i = 0; i < str.length; i++) {
-        let repeatedChar = str[i].toUpperCase() + str[i].toLowerCase().repeat(i)
-
-        result.push(repeatedChar)
-    }
-    return result.join('-')
+    let newArr = str.split('').map((char, index) => {
+        return char.toUpperCase() + char.toLowerCase().repeat(index)
+    })
+    return newArr.join('-')
 }
 
 console.log(accum('abcd'))
