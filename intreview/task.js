@@ -48,3 +48,17 @@ const countSum = (products) => {
 
 console.log(countSum(products))
 
+const myStr = 'Hello world Javascript'
+
+const reverseStr = (str) => {
+    let words = str.split(" ")
+   
+    let reversedWords = words.map(word => {
+        return word.split("").reverse().join('')
+    })
+
+    let newStr = reversedWords.join(' ')
+    console.log(newStr);
+}
+
+reverseStr(myStr)
