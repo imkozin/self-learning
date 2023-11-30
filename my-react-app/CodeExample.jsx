@@ -7,10 +7,11 @@ const CodeExample = () => {
         console.log('hello there');
     }
     sayHello();
+
     return (
         <div>
             <h1>value: {value}</h1>
-            <button type="button" className="btn" onClick={()=> setValue(value + 1)}>click</button>
+            <button className="btn" onClick={()=> setValue(value + 1)}>click me</button>
         </div>
     )
 }
