@@ -7,7 +7,13 @@ import './App.css';
 import UseEffectBasics from './starter/UseEffectBasics'
 import MultipleEffects from './starter/MultipleEffects';
 import FetchData from './starter/FetchData';
-import MultipleReturnBasics from './starter/MultipleReturnBasics';
+// import MultipleReturnBasics from './starter/MultipleReturnBasics';
+// import MultipleReturnsFetchData from './starter/MultipleReturnsFetchData';
+// import Example from './starter/Example';
+// import ShortCircuitOverview from './starter/ShortCircuitOverview';
+// import ToggleChallenge from './starter/ToggleChallenge';
+// import UserChallenge from './starter/UserChallenge';
+import CleanupFunction from './starter/CleanupFunction';
 
 function App() {
 
@@ -21,7 +27,13 @@ function App() {
       {/* <UseEffectBasics/> */}
       {/* <MultipleEffects/> */}
       {/* <FetchData/> */}
-      <MultipleReturnBasics/>
+      {/* <MultipleReturnBasics/> */}
+      {/* <MultipleReturnsFetchData /> */}
+      {/* <Example/> */}
+      {/* <ShortCircuitOverview/> */}
+      {/* <ToggleChallenge/> */}
+      {/* <UserChallenge/> */}
+      <CleanupFunction/>
     </div>
   )
 }
