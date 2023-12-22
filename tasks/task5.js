@@ -4,7 +4,7 @@ function isStringRotated(source, test) {
     }
 
     for (let i = 0; i < source.length; i++) {
-        const rotate = 
+        const rotate = null
     }
 }
 
