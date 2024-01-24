@@ -21,17 +21,55 @@
 
 # d = dict.fromkeys(['a', 'b', 'c', 'd'], 1000)
 
-# d = {
-#     'name': 'John',
-#     'age': 17,
-#     'city': 'New York'
+d = {
+    'name': 'John',
+    'age': 17,
+    'city': 'New York'
+}
+
+# d1 = {
+#     1: 'one',
+#     2: 'two'
 # }
+# l = d.pop('age')
+# a = d.popitem()
+# d.clear()
+# d.get('age')
+# d_copy = d.copy()
+# d.setdefault(78, 'hello')
+# d.update(d1)
+# for i in d.keys():
+#     print(i)
+
+# for i in d.values():
+#     print(i)
+
+# for i in d.items():
+#     print(i)
+
+# print(dict(sorted(d.items())))
 # if 'name' in d:
 #     print(d['name'])
 
 # d['name'] = 'Ivan'
-# print(d)
+# print(list(d.keys()))
 
+tel = {
+    'Ivanov Ivan': {
+        'phone': 123456789,
+        'city': 'Moscow'
+    },
+    'Petrov Petr': {
+        'phone': 987654321,
+        'city': 'St. Petersburg'
+    }
+}
+
+# print(tel['Petrov Petr']['city'])
+
+for i in tel.keys():
+    for x,y in tel[i].items():
+        print(x, y)
 # I)
 # Создать Русско-Английский словарь, который содержит 10 слов с переводом. В качестве ключа используются русские слова.
 # Например:
@@ -45,14 +83,15 @@
 
 # Слово ХХХХХХ переводится как: YYYYYY.
 
+my_dict = {
+    "кот" : "cat",
+    "мышь" : "mouse",
+    "собака" : "dog",
+    "животные": "animals",
+    "город": "city"
+}
+
 def find_word():
-    my_dict = {
-        "кот" : "cat",
-        "мышь" : "mouse",
-        "собака" : "dog",
-        "животные": "animals",
-        "город": "city"
-    }
 
     user_input = input('Enter a word: ')
     if user_input in my_dict:
@@ -81,8 +120,45 @@ def create_student():
             students[key] = name
             print(students)
         else:
+            print('check')
             key = random.randint(100, 999)
             students[key] = name
             print(students)
 
-create_student()
+# create_student()
+            
+# I)
+# Создайте русско-английский словарь, который содержит 10 слов с переводом. На основе этого словаря, сделайте так, чтобы пользователь мог добавить 5 слов с переводом, вводом с клавиатуры. То есть, при запуске программы, она запрашивала бы сначала русское слово, а затем перевод и добавляла этот элемент в словарь.
+def create_dict():
+
+    while len(my_dict) < 10:
+        rus_word = input('Enter word in Ru: ')
+        eng_word = input('Enter word in En: ')
+
+        new_word = {
+            rus_word: eng_word
+        }
+
+        my_dict.update(new_word)
+
+    print(my_dict)
+
+# create_dict()
+
+# II)
+# Используя словарь из 1 задания, необходимо с помощью методов keys() и values() выбрать и вывести ключи, длина которых меньше 6 символов. После чего, вывести все значения ключей, длина которых больше 5 символов.
+
+def read_dict():
+    # for key in my_dict.keys():
+    #     if len(key) < 6:
+    #         print('Key with length less than 6:', key)
+    #     elif len(key) > 5:
+    #         value = my_dict[key]
+    #         print('Value for key with length more than 5:', value)
+    for key, value in zip(my_dict.keys(), my_dict.values()):
+        if len(key) < 6:
+            print('Key with length less than 6:', key)
+        if len(value) > 5:
+            print('Value with length more than 5:', value)
+
+read_dict()
