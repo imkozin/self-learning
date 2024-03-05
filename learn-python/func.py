@@ -49,3 +49,5 @@ print(list(mp))
 
 filt = filter(lambda i: i % 2 == 0, x)
 print(list(filt))
+
+
