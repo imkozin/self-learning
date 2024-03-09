@@ -11,3 +11,15 @@ function isPalindrome(string) {
 }
 
 console.log(isPalindrome('шалаш'));
+
+function reversedStr(string) {
+    const res = []
+
+    for (let i = string.length - 1; i >= 0; i--) {
+        res.push(string[i])
+    }
+    return res.join('')
+    // return string.split('').reverse().join('')
+}
+
+console.log(reversedStr('pizza'));
