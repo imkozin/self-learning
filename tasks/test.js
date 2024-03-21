@@ -154,4 +154,32 @@ function reverseArr(arr) {
   return res
 }
 
-console.log(reverseArr([1, 2, 3, 4, 5]));
+// console.log(reverseArr([1, 2, 3, 4, 5]));
+
+function flattenArr(arr) {
+    const flat = arr.reduce((acc, cur) => {
+        return acc.concat(cur)
+    }, [])
+
+    return flat
+}
+
+console.log(flattenArr([[1,2,3],[3,4,5],[5,6,7]]));
+
+// function flattenArr(arr) {
+//     const flattened = []
+
+//     for (let i = 0; i < arr.length; i++) {
+//         const element = arr[i];
+//         if(Array.isArray(element)) {
+//             flattened.push(...flattenArr(element))
+//         } else {
+//             flattened.push(element)
+//         }
+//     }
+
+//     return flattened
+// }
+
+
+console.log(flattenArr([[[[[[[0]]]]]], [[[[1]]]], [2], [[3]]]));
