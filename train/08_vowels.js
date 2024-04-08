@@ -16,7 +16,7 @@ const findVowels = (str) => {
 // console.log(findVowels('галактика'));
 
 function stringChanger(str) {
-    const arr = str.split('')
+    const arr = str.toLowerCase().split('')
     let res = ''
 
     for (let i of arr) {

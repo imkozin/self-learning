@@ -18,7 +18,7 @@ function reversedStr(string) {
     for (let i = string.length - 1; i >= 0; i--) {
         res.push(string[i])
     }
-    return res.join('')
+    return string === res.join('')
     // return string.split('').reverse().join('')
 }
 
